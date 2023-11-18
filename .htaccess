@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# Redirecionar para página de erro 404 quando não for um arquivo ou diretório existente
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^(.*)$ /Public/View/404/404.php [L]
+
+# Redirecionar todas as outras solicitações para o arquivo index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?pag=$1 [QSA,L]
