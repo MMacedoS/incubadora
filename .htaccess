@@ -1,4 +1,5 @@
 RewriteEngine On
+# RewriteBase /
 
 # Redirecionar para página de erro 404 quando não for um arquivo ou diretório existente
 # RewriteCond %{REQUEST_FILENAME} !-d
